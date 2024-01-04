@@ -1,0 +1,16 @@
+:host {
+   .pack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .card-img {
+      width: 200px;
+      aspect-ratio: 5/7;
+    }
+    h3 span {
+      color: red;
+    }
+  }
+}
+
+

@@ -1,0 +1,63 @@
+<!--
+  <h1>Total Revent: {{resellValue}} € {{resellValue / 1000}} € la boite, {{valuableFoilNumber}}</h1>
+  <h2>Total: {{totalValue}} €</h2>
+
+  <h1>Total Set Revent: {{resellSetValue}} € {{resellSetValue / 1000}} € la boite, {{valuableSetFoilNumber}}</h1>
+  <h2>Total set: {{totalSetValue}} €</h2>
+-->
+
+<h1>Total Collector Revent: {{resellCollectorValue}} € {{resellCollectorValue /1000}} € profit, {{valuableCollectorFoilNumber}}</h1>
+<h2>Total set: {{totalCollectorValue}} €</h2>
+
+<div class="pack">
+  <div *ngFor="let card of collectorFoilPack; trackBy: trackById">
+    <h3 >{{card.prices.eur_foil}}<span>FOIL</span></h3>
+    <p>{{card.name}}</p>
+    <img *ngIf="!card.card_faces" class="card-img" [src]="card.image_uris.normal">
+    <img *ngIf="card.card_faces" class="card-img" [src]="card.card_faces[0].image_uris.normal">
+  </div>
+</div>
+<div class="pack">
+  <div *ngFor="let card of collectorPack; trackBy: trackById">
+    <h3 >{{card.prices.eur}}</h3>
+    <p>{{card.name}}</p>
+    <img *ngIf="!card.card_faces" class="card-img" [src]="card.image_uris.normal">
+    <img *ngIf="card.card_faces" class="card-img" [src]="card.card_faces[0].image_uris.normal">
+  </div>
+</div>
+
+<div class="pack">
+  <div *ngFor="let card of setFoilPack; trackBy: trackById">
+    <h3 >{{card.prices.eur_foil}}<span>FOIL</span></h3>
+    <p>{{card.name}}</p>
+    <img *ngIf="!card.card_faces" class="card-img" [src]="card.image_uris.normal">
+    <img *ngIf="card.card_faces" class="card-img" [src]="card.card_faces[0].image_uris.normal">
+  </div>
+</div>
+<div class="pack">
+  <div *ngFor="let card of setPack; trackBy: trackById">
+    <h3 >{{card.prices.eur}}</h3>
+    <p>{{card.name}}</p>
+    <img *ngIf="!card.card_faces" class="card-img" [src]="card.image_uris.normal">
+    <img *ngIf="card.card_faces" class="card-img" [src]="card.card_faces[0].image_uris.normal">
+  </div>
+</div>
+
+<div class="pack">
+  <div *ngFor="let card of foilPack; trackBy: trackById">
+    <h3 >{{card.prices.eur_foil}}<span>FOIL</span></h3>
+    <p>{{card.name}}</p>
+    <img *ngIf="!card.card_faces" class="card-img" [src]="card.image_uris.normal">
+    <img *ngIf="card.card_faces" class="card-img" [src]="card.card_faces[0].image_uris.normal">
+  </div>
+</div>
+<div class="pack">
+  <div *ngFor="let card of pack; trackBy: trackById">
+    <h3 >{{card.prices.eur}}</h3>
+    <p>{{card.name}}</p>
+      <img *ngIf="!card.card_faces" class="card-img" [src]="card.image_uris.normal">
+      <img *ngIf="card.card_faces" class="card-img" [src]="card.card_faces[0].image_uris?.normal">
+  </div>
+</div>
+
+
